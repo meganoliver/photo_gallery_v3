@@ -1,0 +1,13 @@
+.search {
+  text-align: center;
+}
+
+.container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+a {
+  display: inline-block;
+  padding: 10px;
+}
