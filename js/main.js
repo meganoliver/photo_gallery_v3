@@ -5,8 +5,8 @@
   4. If no match, alert that there are no matches.
 */
 
-var search
-var captions = []
+var search;
+var captions = [];
 
 
 //Take input & put into var (lowercase)
@@ -18,16 +18,19 @@ $('#search-box').on('keyup', function() {
 
 //Put all img & captions in an array
 
-var captions = $("img").toArray();
-console.log(captions); //Testing that it works
+captions.caption = $('#list img').map(function() {
+  return $(this).attr('alt');
+});
 
-//Loop through the array
+captions.image = $('#list img').map(function() {
+  return $(this).attr('src');
+});
+console.log(captions);
 
-for (var i = 0; i < captions.length; i += 1) {
+//* Loop through the array
+for (var i = 0; i < captions.length; i += 1)
   if (search === captions) {
-    $("captions").show()
+    $('captions [1][i]').show();
+  } else {
+    $('captions [1][i]').remove();
   }
-  else {
-    $("captions").hide()
-  }
-}
