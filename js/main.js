@@ -5,32 +5,45 @@
   4. If no match, alert that there are no matches.
 */
 
+var result;
 var search;
 var captions = [];
 
 
-//Take input & put into var (lowercase)
 $('#search-box').on('keyup', function() {
   var search = $(this).val();
   search = search.toLowerCase();
-  console.log(search); //Testing that it works
+  console.log(search);  //Testing that 'var search' works
 });
-
 //Put all img & captions in an array
 
 captions.caption = $('#list img').map(function() {
   return $(this).attr('alt');
 });
 
-captions.image = $('#list img').map(function() {
-  return $(this).attr('src');
-});
+captions.list = $('#list li');
+
 console.log(captions);
 
-//* Loop through the array
-for (var i = 0; i < captions.length; i += 1)
-  if (search === captions) {
-    $('captions [1][i]').show();
-  } else {
-    $('captions [1][i]').remove();
+
+//Take input & put into var (lowercase)
+$('#search-box').on('keyup', function() {
+  for (var i = 0; i < captions.caption.length; i += 1) {
+      result = captions.caption[i].toLowerCase().indexOf(search);
+      console.log(result);
+    }
+});
+
+
+
+// Loop through the array
+
+/*
+
+if () {
+  $(captions.list[i]).show();
+}  else {
+  $(captions.list[i]).hide();
   }
+}
+*/
