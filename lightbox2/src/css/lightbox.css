@@ -166,21 +166,23 @@ body.lb-disable-scrolling {
 }
 
 .lb-data .lb-details {
-  width: 85%;
+  width: 100%;
   float: left;
-  text-align: left;
+  text-align: center;
   line-height: 1.1em;
 }
 
 .lb-data .lb-caption {
-  font-size: 13px;
+  font-size: 20px;
   font-weight: bold;
   line-height: 1em;
 }
 
+
 .lb-data .lb-caption a {
   color: #4ae;
 }
+
 
 .lb-data .lb-number {
   display: block;
@@ -190,6 +192,7 @@ body.lb-disable-scrolling {
   color: #999999;
 }
 
+/*
 .lb-data .lb-close {
   display: block;
   float: right;
@@ -205,6 +208,7 @@ body.lb-disable-scrolling {
   -o-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
+*/
 
 .lb-data .lb-close:hover {
   cursor: pointer;
