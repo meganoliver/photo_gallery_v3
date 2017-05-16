@@ -1,5 +1,4 @@
 var result;
-var search;
 var captions = {};
 
 // Create an object for captions and list items:
@@ -19,9 +18,10 @@ $('#search-box').on('keyup', function() {
       result = captions.caption[i].toLowerCase().indexOf(search);
       console.log(result);
 //Create an if/if else loop:
-      if (result > 1) {
+      if (result > 1 || result === 0) {
         $(captions.list[i]).show();
-      } 
+      }
+
       else {
         $(captions.list[i]).hide();
         }

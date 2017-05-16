@@ -1,3 +1,7 @@
+body {
+  width: 100%;
+}
+
 .form {
   text-align: center;
 }
@@ -13,6 +17,7 @@ ul {
 }
 
 li {
+  display: block;
   list-style: none;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -20,7 +25,6 @@ li {
 }
 
 a {
-  display: inline-block;
   width: 100%;
   text-align: center;
 }
@@ -35,6 +39,11 @@ a {
   border-top: 1px;
   border-left: 1px;
   box-shadow: 5px 5px 10px #888;
+  font-size: 16pt
+}
+
+#pics {
+  width: 100%
 }
 
 /**
@@ -45,7 +54,8 @@ Lightbox Styling
   text-align: center;
 }
 
-@media (min-width: 320px) {
+
+@media (min-width: 450px) {
 
 li {
   display: inline-block;
